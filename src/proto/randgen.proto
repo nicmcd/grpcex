@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service RandGen {
+  rpc getRands(Quantity) returns (RandNums) {}
+}
+
+message Quantity {
+  int32 num = 1;
+}
+
+message RandNums {
+  repeated int32 nums = 1;
+}
