@@ -20,40 +20,6 @@ http_archive(
   build_file = "@cpplint_build//file:downloaded",
 )
 
-"""
-release = "0.8.0"
-http_archive(
-    name = "bazel_skylib",
-    urls = ["https://github.com/bazelbuild/bazel-skylib/archive/" + release + ".tar.gz"],
-    strip_prefix = "bazel-skylib-" + release,
-)
-
-http_file(
-  name = "zlib_build",
-  urls = ["https://raw.githubusercontent.com/nicmcd/pkgbuild/master/zlib.BUILD"],
-)
-
-version = "1.2.11"
-http_archive(
-  name = "net_zlib",
-  urls = ["https://www.zlib.net/zlib-" + version + ".tar.gz"],
-  strip_prefix = "zlib-" + version,
-  build_file = "@zlib_build//file:downloaded",
-)
-
-bind(
-    name = "zlib",
-    actual = "@net_zlib//:zlib",
-)
-
-release = "3.7.1"
-http_archive(
-    name = "com_google_protobuf",
-    urls = ["https://github.com/google/protobuf/archive/v" + release + ".tar.gz"],
-    strip_prefix = "protobuf-" + release,
-)
-"""
-
 release = "1.19.1"
 http_archive(
     name = "com_github_grpc_grpc",
