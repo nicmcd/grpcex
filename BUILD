@@ -48,7 +48,7 @@ cc_library(
 )
 
 cc_binary(
-    name = "grpex",
+    name = "grpcex",
     srcs = ["src/main.cc"],
     copts = COPTS,
     includes = [
@@ -80,7 +80,7 @@ cc_library(
 )
 
 cc_test(
-    name = "protoex_test",
+    name = "grpcex_test",
     args = [
         "--gtest_color=yes",
     ],
